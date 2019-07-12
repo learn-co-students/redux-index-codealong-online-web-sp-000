@@ -10,9 +10,13 @@ class CreateTodo extends Component {
     };
   }
 
+//after we ssubmit the form, we want to clear it so we change the state back to an empty string
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state)
+    this.setState({
+      text: ''
+    })
   }
 
   handleChange(event) {
