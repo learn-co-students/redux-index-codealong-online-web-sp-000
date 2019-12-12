@@ -6,7 +6,6 @@ class TodosContainer extends Component {
   renderTodos = () =>
     this.props.todos.map((todo, id) => <Todo key={id} text={todo} />);
   render() {
-    console.log(this.props);
     return <div>{this.renderTodos()}</div>;
   }
 }
