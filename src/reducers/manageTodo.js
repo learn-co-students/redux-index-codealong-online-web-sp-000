@@ -1,5 +1,6 @@
 export default function manageTodo(state = {
   todos: [],
+  debugger
 }, action) {
   switch (action.type) {
     case 'ADD_TODO':
