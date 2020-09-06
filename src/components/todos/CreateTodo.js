@@ -10,9 +10,20 @@ class CreateTodo extends Component {
     };
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
-    this.props.addTodo(this.state)
+
+
+
+  //Cleanup Todo Input
+//Each time we submit a todo, we want to clear out the input. 
+//Ok, so remember that each time we submit a form, we call handleSubmit. 
+//Inside that handleSubmit function let's reset the component's state by changing our function to the following:
+  
+handleSubmit = event => {
+    event.preventDefault();                  
+    this.props.addTodo(this.state)              
+    this.setState({
+      text: '',
+    })
   }
 
   handleChange(event) {
