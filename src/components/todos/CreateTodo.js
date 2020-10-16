@@ -13,6 +13,10 @@ class CreateTodo extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state)
+    // Each time we submit a todo, we want to clear out the input
+    this.setState({
+      text: '',
+    })
   }
 
   handleChange(event) {
@@ -39,3 +43,4 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null, mapDispatchToProps)(CreateTodo);
+// The CreateTodo component is handling the creation side of things
