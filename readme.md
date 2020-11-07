@@ -84,7 +84,7 @@ __TodosContainer__ component:
 
 ```js
 // ./src/components/todos/TodosContainer.js
-
+, id
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Todo from './Todo'
