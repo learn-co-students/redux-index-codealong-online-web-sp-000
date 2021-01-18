@@ -1,4 +1,4 @@
-# Displaying a List of items with Redux
+## Displaying a List of items with Redux
 
 ## Objectives
 
