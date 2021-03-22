@@ -1,0 +1,18 @@
+Rails.application.routes.draw do
+  post '/login' => 'sessions#create'
+  get '/stories/:id' => 'stories#show'
+  post '/stories' => 'stories#create'
+  post '/meta-contents' => 'meta_contents#create'
+  post '/meta-contents/:id/update' => 'meta_contents#update'
+  get 'meta-contents/:id' => 'meta_contents#show'
+  get 'meta-contents/:id/destroy' => 'meta_contents#destroy'
+  post '/characters' => 'characters#create'
+  post '/characters/:id/update' => 'characters#update'
+  get 'characters/:id' => 'characters#show'
+  get 'characters/:id/destroy' => 'characters#destroy'
+  post '/scenes' => 'scenes#create'
+  post '/scenes/:id' => 'scenes#update'
+  post '/scenes/:id/add-element' => 'scenes#add_element'
+  get '/scenes/:id/destroy' => 'scenes#destroy'
+  post '/users' => 'users#create'
+end
