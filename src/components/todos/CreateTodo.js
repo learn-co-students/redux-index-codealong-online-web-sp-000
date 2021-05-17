@@ -13,14 +13,6 @@ class TodosContainer extends Component {
       </div>
     );
   }
-  handleSubmit = event => {
-    event.preventDefault();
-    this.props.addTodo(this.state)
-    this.setState({
-      text: '',
-    })
-  }
-
 };
 
 export default connect(state => ({ todos: state.todos }))(TodosContainer);
