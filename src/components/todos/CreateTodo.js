@@ -10,6 +10,8 @@ class CreateTodo extends Component {
     };
   }
 
+  notes = "taken"
+  
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state)
